@@ -10,6 +10,8 @@ module tt_um_ProgramCounter(
 	input  wire       rst_n );     // reset_n - low to reset
 
 	assign uio_oe = 8'b11111111;
+
+	reg  [7:0] PC;
 	
 	//initial begin
 	//	uo_out = 8'h00;
@@ -19,18 +21,20 @@ module tt_um_ProgramCounter(
     	begin
 		if (rst_n)
     		begin
-    			ou_out = 8'h00;
+    			PC <= 8'h00;
     		end
     		else
     		begin
 			if (ena == 1) begin
-				ou_out = ui_in;
+				PC <= ui_in;
 			end
 			else
 			begin
-				ou_out += 4;
+				PC <= PC + 4;
 			end
 		end
 	end
+
+	assign uo_out = PC;
 	
 endmodule
