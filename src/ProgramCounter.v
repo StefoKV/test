@@ -10,7 +10,7 @@ module ProgramCounter(
 	input  wire       rst_n );     // reset_n - low to reset
 	
 	initial begin
-		uo_out <= 8'h00;
+		uo_out = 8'h00;
 	end
 
 	always @(posedge clk)
@@ -22,7 +22,7 @@ module ProgramCounter(
     		else
     		begin
 			if (ena == 1) begin
-				ou_out <= ui_in;
+				ou_out = ui_in;
 			end
 			else
 			begin
