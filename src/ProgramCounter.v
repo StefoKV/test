@@ -10,6 +10,7 @@ module tt_um_ProgramCounter(
 	input  wire       rst_n );     // reset_n - low to reset
 
 	assign uio_oe = 8'b11111111;
+	assign uio_out = 8'b11111111;
 
 	reg  [7:0] PC;
 	
