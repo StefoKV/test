@@ -8,10 +8,12 @@ module ProgramCounter(
     	input  wire       ena,      // will go high when the design is enabled
     	input  wire       clk,      // clock
 	input  wire       rst_n );     // reset_n - low to reset
+
+	assign uio_oe = 8'b11111111;
 	
-	initial begin
-		uo_out = 8'h00;
-	end
+	//initial begin
+	//	uo_out = 8'h00;
+	//end
 
 	always @(posedge clk)
     	begin
