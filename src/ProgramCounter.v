@@ -19,7 +19,7 @@ module tt_um_ProgramCounter(
     	begin
 		if (rst_n)
     		begin
-    			ou_out <= 8'h00;
+    			ou_out = 8'h00;
     		end
     		else
     		begin
