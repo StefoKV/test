@@ -14,9 +14,9 @@ module tt_um_ProgramCounter(
 
 	reg  [7:0] PC;
 	
-	initial begin
-		PC <= 8'h00;
-	end
+	//initial begin
+	//	PC <= 8'h00;
+	//end
 
 	always @(posedge clk)
     	begin
